@@ -1,0 +1,10 @@
+.song{
+    &__thumbnai{
+        &>img{
+           width:200px; 
+        }
+    }
+    &__name{
+        font-size: 1.2rem;
+    }
+}
