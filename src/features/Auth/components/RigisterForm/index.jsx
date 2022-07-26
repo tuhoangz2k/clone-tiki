@@ -35,7 +35,7 @@ const ButtonFormRigter = styled(Button)(({ theme }) => ({
 
 function RegisterForm(props) {
   const schema = yup.object().shape({
-    fullname: yup
+    fullName: yup
       .string()
       .required('Vui Lòng Nhập Tên')
       .test('should has at least two words', 'Họ tên phải có ít nhất 2 từ', (value) => {
@@ -61,7 +61,7 @@ function RegisterForm(props) {
   });
   const form = useForm({
     defaultValues: {
-      fullname: '',
+      fullName: '',
       email: '',
       password: '',
       retypePassword: '',
@@ -86,7 +86,7 @@ function RegisterForm(props) {
         Tạo Một Tài Khoản
       </TitleFormRigter>
       <form onSubmit={form.handleSubmit(handleOnSubmit)}>
-        <InputField name="fullname" form={form} label="Họ Tên" />
+        <InputField name="fullName" form={form} label="Họ Tên" />
         <InputField name="email" form={form} label="Email" />
         <PasswordField name="password" form={form} label="Mật Khẩu" />
         <PasswordField name="retypePassword" form={form} label="Nhập Lại Mật Khẩu" />

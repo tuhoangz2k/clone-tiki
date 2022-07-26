@@ -7,7 +7,8 @@ function Register(props) {
   const dispatch = useDispatch();
   const handleSubmit = async (value) => {
     try {
-      value.username = value.fullname;
+      value.username = value.email;
+      console.log(value);
       const user = await dispatch(rigister(value)).unwrap();
       console.log(user);
     } catch (error) {
