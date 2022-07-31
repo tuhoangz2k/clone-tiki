@@ -7,7 +7,6 @@ ProductFeature.propTypes = {};
 function ProductFeature(props) {
   return (
     <Box>
-      <h1>Product Feature</h1>
       <Outlet />
     </Box>
   );

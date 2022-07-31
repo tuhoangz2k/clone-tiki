@@ -1,13 +1,16 @@
 import React from 'react';
 
-import { Box, Skeleton, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { THUMBNAIL_PLACEHOLDER, STATIC_HOST } from 'constants/index';
-
+import { useNavigate } from 'react-router-dom';
 function Product({ product }) {
+  const navigate = useNavigate();
   const thumbnailUrl = product.thumbnail ? `${STATIC_HOST}${product.thumbnail?.url}` : THUMBNAIL_PLACEHOLDER;
-
+  const handleClick = () => {
+    navigate(`${product.id}`);
+  };
   return (
-    <Box padding={1}>
+    <Box padding={1} onClick={handleClick} sx={{ cursor: 'pointer' }}>
       <Box
         padding={1}
         xs={{ minHeight: '180px' }}
