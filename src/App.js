@@ -25,7 +25,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Navigate to="/products" replace />} />
 
         <Route path="products" element={<ProductFeature />}>
           <Route index element={<ListPage />} />
